@@ -7,8 +7,28 @@ public class App {
     public String getGreeting() {
         return "Hello World!";
     }
+    public String getSum(int a, int b){
+      Calculate calculate = new Calculate();
+      String out = "sum of "+String.valueOf(a)+" and "+String.valueOf(b)+" is "+String.valueOf(calculate.sum(a,b))+". Average is "+String.valueOf(calculate.ave(a,b))+".";
+      return out;
+    }
+
+    public String getSumAtoB(int a, int b){
+      Calculate calculate = new Calculate();
+      String out = "sum of "+String.valueOf(a)+" to "+String.valueOf(b)+" is "+String.valueOf(calculate.sumAtoB(a,b))+". Average is "+String.valueOf(calculate.aveAtoB(a,b))+".";
+      return out;
+    }
+
+    public String getoddeven(int a, int b){
+      Calculate calculate = new Calculate();
+      String out = "sum of odd of "+String.valueOf(a)+" to "+String.valueOf(b)+" is "+String.valueOf(calculate.oddAtoB(a,b))+".Sum of even is "+String.valueOf(calculate.evenAtoB(a,b))+".";
+      return out;
+    }
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        System.out.println(new App().getSum(2,3));
+        System.out.println(new App().getSumAtoB(1,10));
+        System.out.println(new App().getoddeven(1,10));
     }
 }
